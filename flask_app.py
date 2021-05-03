@@ -6,7 +6,7 @@ import urllib
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 
 
-params = urllib.parse.quote_plus("DRIVER= {ODBC Driver 17 for SQL Server};SERVER={63.33.44.172};DATABASE={glue};UID={heida};PWD={Krullusnura.NOX}")
+params = urllib.parse.quote_plus("SERVER={63.33.44.172};DATABASE={glue};UID={heida};PWD={Krullusnura.NOX}")
 
 app = Flask(__name__)
 api = Api(app)
