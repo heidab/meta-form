@@ -1,7 +1,7 @@
-from flask import Flask, redirect, render_template, url_for, flash
-from flask import request, jsonify
-from flask_sqlalchemy import SQLAlchemy
-from flask_restful import Resource, Api
+from Flask import Flask, redirect, render_template, url_for, flash
+from Flask import request, jsonify
+from Flask_sqlalchemy import SQLAlchemy
+from Flask_restful import Resource, Api
 import urllib
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 
@@ -10,7 +10,7 @@ params = urllib.parse.quote_plus("SERVER={63.33.44.172};DATABASE={glue};UID={hei
 
 app = Flask(__name__)
 api = Api(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc:///?odbc_connect=%s" % params
+app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pymssql:///?odbc_connect=%s" % params
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
 db = SQLAlchemy(app)
