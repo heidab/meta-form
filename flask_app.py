@@ -3,7 +3,6 @@ from flask import request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Resource, Api
 import urllib
-import pyodbc
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 
 
