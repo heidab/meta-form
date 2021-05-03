@@ -1,45 +1,94 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reusable Form Demo</title>
+        	 	<link rel="stylesheet" media="screen" href="static/bootstrap.min.css">
+        	 	<link rel="stylesheet" href="static/bootstrap-theme.min.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<div class="container">
+<form action="" method="post" role="form">
+  
+<div class="form-group">
+<h2><strong>Við skulum fylla út þetta form</strong></h2> 
 
-        <title>My scratchboard page</title>
-    </head>
+    <label for="project">project</label>
+<input type="text" class="form-control" id="project" name="project"></br>  
+ 
+    <label for="start">start</label>
+<input type="text" class="form-control" id="start" name="start"></br>   
+    <label for="end">end</label>
+<input type="text" class="form-control" id="end" name="end"></br>   
+    <label for="nox_technology">nox_technology</label>
+<input type="text" class="form-control" id="nox_technology" name="nox_technology"></br>
+    <label for="investigators">investigators</label>   
+<input type="text" class="form-control" id="investigators" name="investigators"></br>  
+    <label for="locations">locations</label>
+<input type="text" class="form-control" id="locations" name="locations"></br>  
+    <label for="purpose">purpose</label>
+<input type="text" class="form-control" id="purpose" name="purpose"></br>   
+    <label for="contact">contact</label>
+<input type="text" class="form-control" id="contact" name="contact"></br>   
 
-    <body>
-        <nav class="navbar navbar-inverse">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">My scratchpad</a>
-            </div>
-          </div>
-        </nav>
+    <label for="bill-to-client">bill-to-client</label>
+<input type="text" class="form-control" id="bill-to-client" name="bill-to-client"></br>  
+    <label for="ship-to-address">ship-to-address</label>
+<input type="text" class="form-control" id="ship-to-address" name="ship-to-address"></br>  
+    <label for="transport_cost_to_site">transport_cost_to_site</label>
+<input type="text" class="form-control" id="transport_cost_to_site" name="transport_cost_to_site"></br>   
+    <label for="required_shipment_arrival_date">required_shipment_arrival_date</label>
+<input type="text" class="form-control" id="required_shipment_arrival_date" name="required_shipment_arrival_date"></br> 
+    <label for="investigator_name">investigator_name</label>
+<input type="text" class="form-control" id="investigator_name" name="investigator_name"></br>   
+    <label for="investigator_email_and_phone_number">investigator_email_and_phone_number</label>
+<input type="text" class="form-control" id="investigator_email_and_phone_number" name="investigator_email_and_phone_number"></br>  
+    <label for="contacts_for_RMA_support">contacts_for_RMA_support</label>
+<input type="text" class="form-control" id="contacts_for_RMA_support" name="contacts_for_RMA_support"></br>   
+    <label for="priority_of_RMA_replacements">priority_of_RMA_replacements</label>
+<input type="text" class="form-control" id="priority_of_RMA_replacements" name="priority_of_RMA_replacements"></br>  
+    <label for="number_of_studies">number_of_studies</label>
+<input type="text" class="form-control" id="number_of_studies" name="number_of_studies"></br>  
 
-        <div class="container">
+    <label for="duration_of_study-end_date_of_contract">duration_of_study-end_date_of_contract</label>
+<input type="text" class="form-control" id="duration_of_study-end_date_of_contract" name="duration_of_study-end_date_of_contract"></br>   
+    <label for="payment_terms">payment_terms</label>
+<input type="text" class="form-control" id="payment_terms" name="payment_terms"></br>  
+    <label for="data_access">data_access</label>
+<input type="text" class="form-control" id="data_access" name="data_access"></br>   
 
-            {% for comment in comments %}
-            <div class="row">
-                {{ comment }}
-            </div>
-        {% endfor %}
+    <label for=price_list_for_damaged_units>price_list_for_damaged_units</label>
+<input type="text" class="form-control" id=price_list_for_damaged_units name=price_list_for_damaged_units></br>  
+    <label for="full_BOM_quantities">full_BOM_quantities</label>
+<input type="text" class="form-control" id="full_BOM_quantities" name="full_BOM_quantities"></br>
+    <label for="firmware_versions">firmware_versions</label>  
+<input type="text" class="form-control" id="firmware_versions" name="firmware_versions"></br>   
+    <label for="noxturnal_version">noxturnal_version</label>
+<input type="text" class="form-control" id="noxturnal_version" name="noxturnal_version"></br>   
+    <label for="payment_type">payment_type</label>
+<input type="text" class="form-control" id="payment_type" name="payment_type"></br>   
+</div> </br>
 
-            <div class="row">
-                <form action="." method="POST">
-                    <textarea class="form-control" name="contents" placeholder="Enter a comment"></textarea>
-                    <input type="submit" class="btn btn-success" value="Post comment">
-                </form>
-            </div>
+<button type="submit" class="btn btn-success">Submit</button>
+</form>
 
-        </div>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      {% if "Error" not in message: %}
+      <div class="alert alert-info" >
+      <li><strong> Success! </strong>{{ message }}</li></div>
+      {% elif "Error" in message: %}
+      <div class="alert alert-warning">
+      <li><strong> Failed! </strong>  {{ message }}</li></div>
+      
+      {% endif %}
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+{% block body %}{% endblock %}
 
-    </body>
-</html>
+
+
+
+
+
+
