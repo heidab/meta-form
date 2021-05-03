@@ -3,8 +3,9 @@ from flask import request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Resource, Api
 import urllib
+import pyodbc
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
-import logging
+
 
 params = urllib.parse.quote_plus("DRIVER= {ODBC Driver 17 for SQL Server};SERVER={63.33.44.172};DATABASE={glue};UID={heida};PWD={Krullusnura.NOX}")
 
@@ -14,6 +15,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc:///?odbc_connect=%s" % par
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
 db = SQLAlchemy(app)
+
 
 class MetaTable(db.Model):
 
